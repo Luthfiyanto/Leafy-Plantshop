@@ -21,6 +21,6 @@ export const PUBLIC_URL = HEROKU_APP_NAME ? `https://${HEROKU_APP_NAME}.herokuap
 
 export const DB_DATABASE = HEROKU_PR_NUMBER ? `PR_${HEROKU_PR_NUMBER}` : process.env.DB_DATABASE;
 
-export const HOSTT_PORT = process.env.PORT ?? process.env.HOST_PORT;
+export const HOST_PORT = process.env.PORT ?? process.env.HOST_PORT;
 
 export const { DB_HOST, DB_PORT, JWT_SECRET, DB_USERNAME, DB_PASSWORD, FRONTEND_URL, EMAIL_ADDRESS, EMAIL_PASSWORD, CLOUDINARY_API_KEY, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_SECRET } = process.env;

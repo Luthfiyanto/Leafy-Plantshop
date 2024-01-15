@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "API of online plantshop",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
@@ -26,7 +27,12 @@
     "sequelize-cli": "^6.6.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "start": "cross-env NODE_ENV=production node src/index.js",
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist --copy-files",
+    "serve": "node dist/index.js",
+    "lint": "eslint . --max-warnings=0"
   },
   "author": "",
   "license": "ISC"
